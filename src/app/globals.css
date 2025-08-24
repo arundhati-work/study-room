@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Soft pastel color palette inspired by bento box design */
+  --color-healthcare-50: #f0fdf4;
+  --color-healthcare-100: #dcfce7;
+  --color-healthcare-200: #bbf7d0;
+  --color-healthcare-300: #86efac;
+  --color-healthcare-400: #4ade80;
+  --color-healthcare-500: #22c55e;
+  --color-healthcare-600: #16a34a;
+  --color-healthcare-700: #15803d;
+  --color-healthcare-800: #166534;
+  --color-healthcare-900: #14532d;
+  
+  --color-cases-50: #f8fafc;
+  --color-cases-100: #f1f5f9;
+  --color-cases-200: #e2e8f0;
+  --color-cases-300: #cbd5e1;
+  --color-cases-400: #94a3b8;
+  --color-cases-500: #64748b;
+  --color-cases-600: #475569;
+  --color-cases-700: #334155;
+  --color-cases-800: #1e293b;
+  --color-cases-900: #0f172a;
+  
+  --color-development-50: #eff6ff;
+  --color-development-100: #dbeafe;
+  --color-development-200: #bfdbfe;
+  --color-development-300: #93c5fd;
+  --color-development-400: #60a5fa;
+  --color-development-500: #3b82f6;
+  --color-development-600: #2563eb;
+  --color-development-700: #1d4ed8;
+  --color-development-800: #1e40af;
+  --color-development-900: #1e3a8a;
+  
+  --color-insurance-50: #faf5ff;
+  --color-insurance-100: #f3e8ff;
+  --color-insurance-200: #e9d5ff;
+  --color-insurance-300: #d8b4fe;
+  --color-insurance-400: #c084fc;
+  --color-insurance-500: #a855f7;
+  --color-insurance-600: #9333ea;
+  --color-insurance-700: #7c3aed;
+  --color-insurance-800: #6b21a8;
+  --color-insurance-900: #581c87;
+  
+  --color-tourism-50: #f0f9ff;
+  --color-tourism-100: #e0f2fe;
+  --color-tourism-200: #bae6fd;
+  --color-tourism-300: #7dd3fc;
+  --color-tourism-400: #38bdf8;
+  --color-tourism-500: #0ea5e9;
+  --color-tourism-600: #0284c7;
+  --color-tourism-700: #0369a1;
+  --color-tourism-800: #075985;
+  --color-tourism-900: #0c4a6e;
+  
+  --color-design-50: #fdf2f8;
+  --color-design-100: #fce7f3;
+  --color-design-200: #fbcfe8;
+  --color-design-300: #f9a8d4;
+  --color-design-400: #f472b6;
+  --color-design-500: #ec4899;
+  --color-design-600: #db2777;
+  --color-design-700: #be185d;
+  --color-design-800: #9d174d;
+  --color-design-900: #831843;
+  
+  --color-elearning-50: #fefce8;
+  --color-elearning-100: #fef9c3;
+  --color-elearning-200: #fef08a;
+  --color-elearning-300: #fde047;
+  --color-elearning-400: #facc15;
+  --color-elearning-500: #eab308;
+  --color-elearning-600: #ca8a04;
+  --color-elearning-700: #a16207;
+  --color-elearning-800: #854d0e;
+  --color-elearning-900: #713f12;
+  
+  --color-logistics-50: #fff7ed;
+  --color-logistics-100: #ffedd5;
+  --color-logistics-200: #fed7aa;
+  --color-logistics-300: #fdba74;
+  --color-logistics-400: #fb923c;
+  --color-logistics-500: #f97316;
+  --color-logistics-600: #ea580c;
+  --color-logistics-700: #c2410c;
+  --color-logistics-800: #9a3412;
+  --color-logistics-900: #7c2d12;
+  
+  /* Keep existing colors for backward compatibility */
+  --color-lavender-50: #faf5ff;
+  --color-lavender-100: #f3e8ff;
+  --color-lavender-200: #e9d5ff;
+  --color-lavender-300: #d8b4fe;
+  --color-lavender-400: #c084fc;
+  --color-lavender-500: #a855f7;
+  --color-lavender-600: #9333ea;
+  --color-lavender-700: #7c3aed;
+  --color-lavender-800: #6b21a8;
+  --color-lavender-900: #581c87;
+  
+  --color-pink-50: #fdf2f8;
+  --color-pink-100: #fce7f3;
+  --color-pink-200: #fbcfe8;
+  --color-pink-300: #f9a8d4;
+  --color-pink-400: #f472b6;
+  --color-pink-500: #ec4899;
+  --color-pink-600: #db2777;
+  --color-pink-700: #be185d;
+  --color-pink-800: #9d174d;
+  --color-pink-900: #831843;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  color: #111827;
+  line-height: 1.6;
+}
+
+body {
+  color: #111827;
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9fafb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
+
+/* Selection styling */
+::selection {
+  background: var(--color-lavender-100);
+  color: #111827;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid var(--color-lavender-400);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.15s ease-in-out;
+}
