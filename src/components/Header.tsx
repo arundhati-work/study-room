@@ -4,7 +4,6 @@ import { BookOpen } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Header() {
-
   return (
     <header className="bg-white sticky top-0 z-50">
       <div className="max-w-4xl mx-auto px-6">
@@ -31,11 +30,7 @@ export default function Header() {
               </p>
             </div>
           </Link>
-
-
         </div>
-
-
       </div>
     </header>
   );

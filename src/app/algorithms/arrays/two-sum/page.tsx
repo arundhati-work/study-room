@@ -6,7 +6,7 @@ import { Clock, BookOpen, Target, Zap, CheckCircle, AlertCircle, Calendar } from
 
 export default function TwoSumPage() {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto p-6 lg:p-8">
       <Breadcrumb 
         items={[
           { label: 'Algorithms', href: '/algorithms' },
