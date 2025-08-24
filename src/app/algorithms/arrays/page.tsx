@@ -86,19 +86,19 @@ export default function ArraysPage() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <div className="bg-healthcare-50 rounded-2xl p-6 text-center shadow-soft">
-            <div className="text-2xl font-bold text-healthcare-600">{arrayNotes.length}</div>
+          <div className="bg-green-50 rounded-2xl p-6 text-center shadow-md">
+            <div className="text-2xl font-bold text-green-600">{arrayNotes.length}</div>
             <div className="text-sm text-gray-600 mt-1">Problems</div>
           </div>
-          <div className="bg-green-50 rounded-2xl p-6 text-center shadow-soft">
+          <div className="bg-green-50 rounded-2xl p-6 text-center shadow-md">
             <div className="text-2xl font-bold text-green-600">3</div>
             <div className="text-sm text-gray-600 mt-1">Easy</div>
           </div>
-          <div className="bg-yellow-50 rounded-2xl p-6 text-center shadow-soft">
+          <div className="bg-yellow-50 rounded-2xl p-6 text-center shadow-md">
             <div className="text-2xl font-bold text-yellow-600">2</div>
             <div className="text-sm text-gray-600 mt-1">Medium</div>
           </div>
-          <div className="bg-red-50 rounded-2xl p-6 text-center shadow-soft">
+          <div className="bg-red-50 rounded-2xl p-6 text-center shadow-md">
             <div className="text-2xl font-bold text-red-600">0</div>
             <div className="text-sm text-gray-600 mt-1">Hard</div>
           </div>
@@ -110,7 +110,7 @@ export default function ArraysPage() {
             <Link 
               key={note.id}
               href={note.path}
-              className="group block bg-white rounded-2xl p-6 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              className="group block bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1 space-y-4">
