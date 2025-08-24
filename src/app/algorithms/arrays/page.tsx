@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Code, Clock, BookOpen } from 'lucide-react';
+import { ArrowRight, Code, Clock, BookOpen, Calendar } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 
 const arrayNotes = [
@@ -13,50 +13,6 @@ const arrayNotes = [
     tags: ['hashmap', 'arrays', 'java'],
     path: '/algorithms/arrays/two-sum',
     lastUpdated: '2024-01-15'
-  },
-  {
-    id: 'valid-parentheses',
-    title: 'Valid Parentheses',
-    description: 'Check if a string of parentheses is valid using a stack',
-    difficulty: 'Easy',
-    timeComplexity: 'O(n)',
-    spaceComplexity: 'O(n)',
-    tags: ['stack', 'strings', 'java'],
-    path: '/algorithms/arrays/valid-parentheses',
-    lastUpdated: '2024-01-14'
-  },
-  {
-    id: 'max-subarray',
-    title: 'Maximum Subarray (Kadane\'s Algorithm)',
-    description: 'Find the contiguous subarray with the largest sum',
-    difficulty: 'Medium',
-    timeComplexity: 'O(n)',
-    spaceComplexity: 'O(1)',
-    tags: ['dynamic-programming', 'arrays', 'java'],
-    path: '/algorithms/arrays/max-subarray',
-    lastUpdated: '2024-01-13'
-  },
-  {
-    id: 'merge-sorted',
-    title: 'Merge Sorted Arrays',
-    description: 'Merge two sorted arrays into a single sorted array',
-    difficulty: 'Easy',
-    timeComplexity: 'O(m + n)',
-    spaceComplexity: 'O(m + n)',
-    tags: ['two-pointers', 'arrays', 'java'],
-    path: '/algorithms/arrays/merge-sorted',
-    lastUpdated: '2024-01-12'
-  },
-  {
-    id: 'remove-duplicates',
-    title: 'Remove Duplicates from Sorted Array',
-    description: 'Remove duplicates in-place from a sorted array',
-    difficulty: 'Easy',
-    timeComplexity: 'O(n)',
-    spaceComplexity: 'O(1)',
-    tags: ['two-pointers', 'arrays', 'java'],
-    path: '/algorithms/arrays/remove-duplicates',
-    lastUpdated: '2024-01-11'
   }
 ];
 
@@ -66,7 +22,7 @@ export default function ArraysPage() {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <Breadcrumb 
           items={[
-            { label: 'Algorithms', href: '/algorithms/arrays' },
+            { label: 'Algorithms', href: '/algorithms' },
             { label: 'Arrays & Strings' }
           ]} 
         />
@@ -91,11 +47,11 @@ export default function ArraysPage() {
             <div className="text-sm text-gray-600 mt-1">Problems</div>
           </div>
           <div className="bg-green-50 rounded-2xl p-6 text-center shadow-md">
-            <div className="text-2xl font-bold text-green-600">3</div>
+            <div className="text-2xl font-bold text-green-600">1</div>
             <div className="text-sm text-gray-600 mt-1">Easy</div>
           </div>
           <div className="bg-yellow-50 rounded-2xl p-6 text-center shadow-md">
-            <div className="text-2xl font-bold text-yellow-600">2</div>
+            <div className="text-2xl font-bold text-yellow-600">0</div>
             <div className="text-sm text-gray-600 mt-1">Medium</div>
           </div>
           <div className="bg-red-50 rounded-2xl p-6 text-center shadow-md">
@@ -140,6 +96,14 @@ export default function ArraysPage() {
                       <BookOpen className="w-4 h-4" />
                       <span>O({note.spaceComplexity})</span>
                     </div>
+                    <div className="flex items-center space-x-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{new Date(note.lastUpdated).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'short', 
+                        day: 'numeric' 
+                      })}</span>
+                    </div>
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
@@ -160,32 +124,6 @@ export default function ArraysPage() {
           ))}
         </div>
 
-        {/* Quick Tips */}
-        <div className="mt-16 bg-healthcare-50 rounded-2xl p-8 border border-healthcare-200">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Tips for Array Problems</h3>
-          <ul className="space-y-3 text-gray-700">
-            <li className="flex items-start space-x-3">
-              <span className="text-healthcare-600 mt-1">•</span>
-              <span>Consider using a HashMap for O(1) lookups when you need to find elements</span>
-            </li>
-            <li className="flex items-start space-x-3">
-              <span className="text-healthcare-600 mt-1">•</span>
-              <span>Two pointers technique is often useful for sorted arrays</span>
-            </li>
-            <li className="flex items-start space-x-3">
-              <span className="text-healthcare-600 mt-1">•</span>
-              <span>Sliding window is great for subarray problems</span>
-            </li>
-            <li className="flex items-start space-x-3">
-              <span className="text-healthcare-600 mt-1">•</span>
-              <span>Don't forget edge cases: empty arrays, single elements, duplicates</span>
-            </li>
-            <li className="flex items-start space-x-3">
-              <span className="text-healthcare-600 mt-1">•</span>
-              <span>Consider in-place operations to optimize space complexity</span>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   );
